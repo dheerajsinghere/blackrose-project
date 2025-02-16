@@ -1,42 +1,104 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+.service-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 102, 0.2);
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.service-card.highlighted {
+  border: 1px solid #00ff66;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.service-icon {
+  font-size: 28px;
+  color: #00ff66;
+  margin-right: 15px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+
+.hexagon-border {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(135deg, #00ff66, #6d28d9);
+
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.hexagon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+
+
+.team-curve-layout {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curve-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+}
+
+.team-member-circle {
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.team-member-circle img {
+  border: 3px solid white;
+  transition: transform 0.3s;
+}
+
+.team-member-circle.active img {
+  border-color: #00ff66;
+}
+
+
+.document-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.document-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+
+.email-subscription-input input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.email-subscription-input input:focus {
+  box-shadow: none;
+  outline: none;
 }
