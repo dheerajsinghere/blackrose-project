@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import '../app/globals.css';
 import bgImage from '@/images/bg1.png'; // Importing the image
-import bgImage2 from '@/images/bg2.png'; // Importing the image
+// import bgImage2 from '@/images/bg2.png';
 import { FaKey, FaPenFancy, FaMoneyBillWave, FaUsers } from 'react-icons/fa'; // Icons for services
 import Image from 'next/image';
 import vrImage from '@/images/market-opportunities.png'; // Update with your image path
